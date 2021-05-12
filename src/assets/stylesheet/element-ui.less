@@ -1,0 +1,109 @@
+/* element-ui css 用于重写某些 element-ui 默认的样式 */
+
+.el-loading-mask {
+  z-index: 1999; // 避免 loading-mask 与 message 弹窗层次重叠
+}
+
+
+.normal-form {
+  .el-form {
+    border: 1px solid #ced4da;
+    .row-form {
+      display: flex;
+      width: 100%;
+      border-bottom: 1px solid #ced4da;
+      &:last-child {
+        border-bottom: none;
+      }
+      .el-form-item {
+        width: 100%;
+        margin: 0;
+        &:not(:first-child) {
+          border-left: 1px solid #ced4da;
+        }
+        .el-form-item__label {
+          height: 100%;
+          background-color: #f8f9fa;
+          color: #868e96;
+          border-right: 1px solid #ced4da;
+          text-align: left;
+          padding: 0 20px;
+        }
+        .el-form-item__content {
+          line-height: inherit;
+          .el-select {
+            width: 100%;
+          }
+          .el-input__inner {
+            border: none;
+          }
+          .editor {
+            flex: 1;
+            height: 100%;
+            overflow: hidden;
+  
+            .ql-toolbar {
+              border: none;
+              border-bottom: 1px solid #CED4DA;
+            }
+  
+            .ql-container {
+              height: 160px;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.general-form {
+  .el-form {
+    .row-form {
+      display: flex;
+      width: 100%;
+      margin-top: 10px;
+      &:first-child {
+        margin: 0;
+      }
+      .el-form-item {
+        width: 100%;
+        margin: 0;
+        .el-select {
+          width: 100%;
+        }
+        .el-date-editor {
+          width: 100%;
+        }
+        .editor {
+          flex: 1;
+          height: 100%;
+          overflow: hidden;
+
+          .ql-toolbar {
+            border-bottom: 1px solid #CED4DA;
+          }
+
+          .ql-container {
+            height: 160px;
+          }
+          .ql-picker {
+            line-height: 24px;
+          }
+        }
+        .el-cascader {
+          width: 100%;
+        }
+        // .el-form-item__label {
+        //   height: 100%;
+        //   background-color: #f8f9fa;
+        //   color: #868e96;
+        //   border-right: 1px solid #ced4da;
+        //   text-align: left;
+        //   padding: 0 20px;
+        // }
+      }
+    }
+  }
+}

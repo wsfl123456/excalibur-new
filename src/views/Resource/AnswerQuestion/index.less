@@ -1,0 +1,389 @@
+.answer_question {
+  //自定义滚动条样式
+  ::-webkit-scrollbar-track {
+    height: 100px;
+  }
+  ::-webkit-scrollbar-track-piece {
+    background-color: #d8d8d8;
+    -webkit-border-radius: 5px;
+    height: 100px;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 100px;
+  }
+  ::-webkit-scrollbar-thumb:vertical {
+    background-color: #2d8ef8;
+    -webkit-border-radius: 5px;
+    outline: 2px solid #fff;
+    outline-offset: -2px;
+  }
+  padding: 20px;
+
+  .el-tabs__item {
+    height: 48px;
+    line-height: 48px;
+  }
+
+  .list {
+    margin-top: 30px;
+    .el-tabs__nav {
+      float: none;
+      .is-active {
+        background-color: #409eff !important;
+        color: #fff !important;
+      }
+      .el-tabs__item {
+        width: 50%;
+        text-align: center;
+        font-size: 18px;
+        &:last-child {
+          margin-left: 2px;
+        }
+      }
+    }
+    .serach {
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      .el-input__inner {
+        border-radius: 4px 0 0 4px;
+      }
+
+      .el-button {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+
+    .no-answer {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .state {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      & > div:first-child {
+        margin-right: 10px;
+        font-size: 14px;
+        color: #adb5bd;
+        span {
+          color: #f56c6c;
+        }
+      }
+    }
+
+    .btn-group {
+      text-align: center;
+      margin-top: 30px;
+      .el-button--default {
+        color: #409eff;
+        border: 1px solid#409EFF;
+      }
+    }
+
+    .is-activing {
+      .el-collapse-item__header {
+        border-bottom: none !important;
+      }
+    }
+
+    .el-collapse {
+      border-top: none;
+      .el-collapse-item {
+        &:last-child {
+          .el-collapse-item__header {
+            border-bottom: none;
+          }
+        }
+        .el-collapse-item__header {
+          height: auto;
+          line-height: 1;
+          border-bottom: 1px dashed #ebeef5;
+          .is-active {
+            color: #409eff;
+          }
+          .el-collapse-item__arrow {
+            display: none;
+          }
+          .header {
+            padding: 20px 0;
+            width: 100%;
+            .title {
+              display: flex;
+              & > div:first-child {
+                font-size: 16px;
+                line-height: 1.5;
+                flex: 1;
+              }
+              .operate {
+                width: 180px;
+                margin-left: 100px;
+                display: flex;
+                justify-content: flex-end;
+                .el-button {
+                  padding: 0 10px;
+                }
+              }
+            }
+            .question-list {
+              margin-top: 20px;
+              >div {
+                &:first-child {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  .operate {
+                    width: 180px;
+                    margin-top: 4px;
+                    display: flex;
+                    justify-content: flex-end;
+                    .el-button {
+                      padding: 0 10px;
+                    }
+                  }
+                }
+              }
+            }
+            .user {
+              display: flex;
+              > div {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                margin-right: 50px;
+                .from,.answer {
+                  margin-left: 0;
+                  >span {
+                    color: #2D8EF8;
+                  }
+                }
+                .name {
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  width: 120px;
+                }
+
+                & > span {
+                  color: #adb5bd;
+                  font-size: 14px;
+                  margin-left: 10px;
+                }
+              }
+            }
+            .content {
+              width: 80%;
+              margin-top: 20px;
+              font-size: 14px;
+              color: #495057;
+              overflow: hidden;
+              /*文本不会换行*/
+              white-space: nowrap;
+              /*当文本溢出包含元素时，以省略号表示超出的文本*/
+              text-overflow: ellipsis;
+           
+            }
+          }
+        }
+        .el-collapse-item__content {
+          background: #f8f9fa;
+          border: 1px solid #2d8ef8;
+          padding: 20px;
+          // height: 318px;
+          // overflow-y: auto;
+          img {
+            max-width: 100%;
+            object-fit: cover;
+          }
+
+          .quill-editor  {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .add-question {
+    position: fixed;
+    bottom: 200px;
+    right: -80px;
+    width: 120px;
+    height: 48px;
+    line-height: 48px;
+    display: flex;
+    background: #2d8ef8;
+    box-shadow: 0 0 4px 0 #4185f3;
+    border-radius: 100px 0px 0px 100px;
+    color: #fff;
+    transition: all 1s;
+
+    &:hover {
+      right: 0;
+    }
+
+    > div {
+      &:first-child {
+        width: 40px;
+        text-align: center;
+        font-size: 18px;
+      }
+      &:last-child {
+        width: 80px;
+        .el-button--text {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .el-dialog__body {
+    padding: 0;
+    .dislog-content {
+      padding: 20px 30px;
+      border-top: 1px solid #ced4da;
+      border-bottom: 1px solid #ced4da;
+    }
+  }
+  .cancel {
+    color: #409eff;
+    border: 1px solid #409eff;
+  }
+
+  .add_solutions-dialog-upload {
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    padding: 0 15px;
+    background-color: #fff;
+    .add_solutions-dialog-upload-list {
+      border-bottom: 1px dashed #ced4da;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &:last-child {
+        border-bottom: none;
+      }
+      > div {
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      > i {
+        color: #ff6666;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .picture-upload {
+    height: 100px;
+    padding-top: 10px;
+    padding-left: 15px;
+    .el-upload--text {
+      // display: flex;
+      .icon {
+        height: 80px;
+        line-height: 80px;
+        width: 80px;
+        background-color: #fff;
+        text-align: center;
+        border: 1px dashed #d9d9d9;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+  
+      .remake {
+        height: 80px;
+        line-height: 80px;
+        display: inline-block;
+        margin-left: 20px;
+        color: rgb(173, 181, 189);
+        cursor: default;
+        >span {
+          color: rgb(245, 108, 108);
+        }
+      }
+    }
+    
+
+    .upload-view {
+      width: 80px;
+      height: 80px;
+      position: relative;
+      .operate {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, .5);
+        height: 80px;
+        width: 107px;
+        display: none;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+        i {
+          font-size: 18px
+        }
+      }
+      &:hover {
+        .operate {
+          display: flex;
+        }
+      }
+    }
+  }
+  .btn-group {
+    text-align: center;
+    margin-top: 30px;
+    .el-button--default {
+      color: #409eff;
+      border: 1px solid#409EFF;
+    }
+  }
+}
+.no_public_list {
+  >div {
+    border-bottom: 1px #909399 solid;
+    margin-bottom: 20px;
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    .title {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .header {
+      padding-top: 0 !important;
+    }
+    .answer-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .operate {
+        margin-top: 5px;
+        .el-button {
+          padding: 0 10px;
+        }
+      }
+    }
+    
+  }
+  
+}
+
+.answer_question_upload {
+  display: flex;
+  background-color: #fff;
+  padding:0 15px;
+  width: 100%;
+  border: 1px solid rgb(220, 223, 230);
+  border-radius: 4px;
+  .el-input__inner {
+    border: none;
+  }
+}

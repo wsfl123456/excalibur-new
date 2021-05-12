@@ -1,0 +1,73 @@
+.add_question {
+  .add_question-group {
+    position: fixed;
+    bottom: 180px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    .add_question-btn {
+      display: flex;
+      justify-content: center;
+      line-height: 25px;
+      border-radius: 50%;
+      border: 15px #2d8ef8 solid;
+      background-color: #fff;
+      .el-dropdown {
+        width: 30px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .add_icon {
+        font-size: 30px;
+        color: #2d8ef8;
+      }
+    }
+  }
+
+  .el-dialog__body {
+    padding: 0;
+    .add_question-dialog {
+      padding: 20px 30px;
+      border-top: 1px solid #ced4da;
+      border-bottom: 1px solid #ced4da;
+    }
+    .add_solutions-dialog {
+      padding: 20px 30px;
+      border-top: 1px solid #ced4da;
+      border-bottom: 1px solid #ced4da;
+      .add_solutions-dialog-upload {
+        border: 1px solid #dcdfe6;
+        border-radius: 4px;
+        padding: 0 15px;
+        background-color: #fff;
+        .add_solutions-dialog-upload-list {
+          border-bottom: 1px dashed #ced4da;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          > div {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          > i {
+            color: #ff6666;
+            font-size: 16px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .add_question-cancel {
+    color: #409eff;
+    border: 1px solid #409eff;
+  }
+  .add_question_upload_hide {
+    // display: none;
+    .el-upload {
+      // visibility: hidden;
+      display: none;
+    }
+  }
+}

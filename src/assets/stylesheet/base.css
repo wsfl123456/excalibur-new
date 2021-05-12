@@ -1,0 +1,152 @@
+/*
+ * Base.css 是全局CSS，用于规范包括字体、CSS盒子在内等等全局样式、
+ * 与Normalize.css 一起两者一同使得全局UI尽力保持在统一、优雅的情况之下
+ * */
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
+    Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei,
+    sans-serif;
+  font-size: 15px;
+  color: #1a1a1a;
+  background: #ffffff;
+  -webkit-tap-highlight-color: rgba(26, 26, 26, 0);
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.new-icon {
+  display: inline-block;
+  margin-left: 2px;
+  width: 18px;
+  height: 12px;
+  background: url("~@/assets/imgs/icons.bd23eb6b.png") no-repeat scroll 0 -1886px;
+  vertical-align: top;
+}
+
+.clear {
+  display: block;
+  clear: both;
+}
+
+.back {
+  cursor: pointer;
+  color: #2d8ef8;
+}
+
+.back::before {
+  display: inline-block;
+  content: "\e6dd";
+  font-size: 15px;
+  margin-bottom: 15px;
+  margin-right: 3px;
+  color: #2d8ef8;
+  transition: color 0.15s linear;
+  font-family: element-icons, serif !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+}
+
+.link {
+  font-size: 14px;
+  color: #2d8ef8;
+}
+
+.hover:hover {
+  color: #2d8ef8;
+}
+
+.btn-large {
+  padding: 16px 37px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.top25 {
+  margin-top: 25px;
+}
+
+.top20 {
+  margin-top: 20px;
+}
+
+.left15 {
+  margin-left: 15px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.red-important {
+  color: #ff6666 !important;
+}
+
+.switch-open {
+  color: rgb(19, 206, 102);
+}
+
+.switch-close {
+  color: rgb(255, 73, 73);
+}
+
+.upload-error-wrapper {
+  display: block;
+  height: 224px;
+}
+
+.upload-error-wrapper > .upload-fail-img {
+  display: block;
+  margin: 70px auto 48px;
+  width: 64px;
+  height: 64px;
+  background: url("../imgs/231-sad2.png") no-repeat;
+  background-size: contain;
+}
+
+.upload-error-wrapper > .error-msg {
+  text-align: center;
+  font-size: 18px;
+  color: #495057;
+}

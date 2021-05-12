@@ -1,0 +1,167 @@
+.common-head {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 48px;
+  z-index: 2000;
+  background-color: #2d8ef8;
+
+  .left-menu {
+    display: flex;
+
+    .brand-icon {
+      display: flex;
+      width: 164px;
+      height: 48px;
+      align-items: center;
+
+      > img {
+        width: 100%;
+        height: 28px;
+      }
+    }
+
+    .top-menu {
+      display: flex;
+      margin: 0 10px;
+
+      .item {
+        height: 100%;
+
+        > a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          //padding: 0 24px;
+          width: 76px;
+          height: 100%;
+          font-size: 14px;
+          color: #ffffff;
+          background-color: #2d8ef8;
+
+          &.active, &:hover {
+            color: #2d8ef8;
+            background-color: #ffffff;
+          }
+        }
+
+        .isActive {
+          color: #2d8ef8 !important;
+          background-color: #ffffff !important;
+        }
+      }
+    }
+  }
+
+  .right-toolbar {
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+
+    .el-icon-circle-plus {
+      padding: 5px;
+      font-size: 19px;
+      color: white
+    }
+
+    .search-bar {
+      display: flex;
+      margin-right: 20px;
+
+      .search-type {
+        .el-input__inner {
+          width: 100px;
+          height: 36px;
+          border-color: transparent;
+          border-radius: 4px 0 0 4px;
+        }
+
+        .el-input__icon {
+          line-height: 36px;
+        }
+      }
+
+      .search-input {
+        .el-input__inner {
+          width: 180px;
+          height: 36px;
+          border-color: transparent transparent transparent #ced4da;
+          border-radius: 0 4px 4px 0;
+
+          &:hover, &:focus {
+            border-color: transparent transparent transparent #ced4da;
+          }
+        }
+
+        .el-input__suffix {
+          right: 0;
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            display: table;
+            height: 16px;
+            width: 1px;
+            background-color: #ced4da;
+          }
+
+          .el-icon-search {
+            cursor: pointer;
+          }
+        }
+
+        .el-icon-search {
+          width: 36px;
+          line-height: 36px;
+          font-weight: bold;
+          color: rgb(45, 142, 248);
+        }
+
+        .el-input__clear {
+          position: absolute;
+          top: 0;
+          right: 38px;
+          color: #FF8685;
+          line-height: 36px;
+        }
+      }
+    }
+
+
+    > .el-badge {
+      position: relative;
+      z-index: 1;
+    }
+
+    .el-icon-question, .el-icon-message-solid {
+      padding: 5px;
+      cursor: pointer;
+      color: #ffffff;
+      font-size: 19px;
+
+      &:hover {
+        color: #adb5bd;
+      }
+    }
+
+    .user-menu {
+      border-bottom: none;
+
+      .el-submenu__title {
+        height: 48px;
+        line-height: 48px;
+        color: #ffffff;
+        background-color: #2d8ef8;
+
+        .el-submenu__icon-arrow {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

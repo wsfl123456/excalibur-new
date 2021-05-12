@@ -1,0 +1,366 @@
+.q_a {
+  //自定义滚动条样式
+  ::-webkit-scrollbar-track {
+    height: 100px;
+  }
+  ::-webkit-scrollbar-track-piece {
+    background-color: #d8d8d8;
+    -webkit-border-radius: 5px;
+    height: 100px;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 100px;
+  }
+  ::-webkit-scrollbar-thumb:vertical {
+    background-color: #2d8ef8;
+    -webkit-border-radius: 5px;
+    outline: 2px solid #fff;
+    outline-offset: -2px;
+  }
+  padding: 20px;
+  .filter {
+    display: flex;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    .label {
+      width: 120px;
+      height: 48px;
+      line-height: 48px;
+      background: #f8f9fa;
+      border-right: 1px solid #ced4da;
+      border-radius: 4px 0 0 4px;
+      color: #868e96;
+      text-align: center;
+    }
+    .radio-group {
+      padding-left: 30px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .serach {
+    background: #f8f9fa;
+    border: 1px solid #ced4da;
+    padding: 10px 20px;
+    display: flex;
+    margin-top: 30px;
+    .serach-input {
+      .el-input__inner {
+        border-radius: 4px 0 0 4px;
+      }
+    }
+    .serach-submit {
+      border-radius: 0 4px 4px 0;
+    }
+    .serach-view {
+      margin-left: 20px;
+    }
+  }
+
+  .no-answer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .el-collapse {
+    border-top: none;
+    .el-collapse-item {
+      &:last-child {
+        .el-collapse-item__header {
+          border-bottom: none;
+        }
+      }
+      .el-collapse-item__header {
+        height: auto;
+        line-height: 1;
+        border-bottom: 1px dashed #ebeef5;
+        .is-active {
+          color: #409eff;
+        }
+        .el-collapse-item__arrow {
+          display: none;
+        }
+        .header {
+          padding: 20px 0;
+          width: 100%;
+          .title {
+            display: flex;
+            & > div:first-child {
+              font-size: 16px;
+              line-height: 1.5;
+              flex: 1;
+            }
+            .operate {
+              width: 180px;
+              margin-left: 100px;
+              display: flex;
+              justify-content: flex-end;
+              .el-button {
+                padding: 0 10px;
+              }
+            }
+          }
+          .user {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            .name {
+              width: 150px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+            & > span {
+              color: #adb5bd;
+              font-size: 14px;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+      .el-collapse-item__content {
+        background: #f8f9fa;
+        border: 1px solid #2d8ef8;
+        padding: 20px;
+        height: 480px;
+        overflow-y: auto;
+        img {
+          max-width: 100%;
+          object-fit: cover;
+        }
+        .quill-editor {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  .add_solutions-dialog-upload {
+    border: 1px solid #dcdfe6;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 0 15px;
+    .add_solutions-dialog-upload-list {
+      border-bottom: 1px dashed #ced4da;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      > div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      > i {
+        color: #ff6666;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .btn-group {
+    text-align: center;
+    margin-top: 30px;
+    .el-button--default {
+      color: #409eff;
+      border: 1px solid#409EFF;
+    }
+  }
+  .q_a_upload_hide {
+    .el-upload {
+      display: none;
+    }
+  }
+}
+
+.qa-my_submit {
+  padding: 20px;
+  .content {
+    .el-tabs__nav {
+      float: none;
+      .is-active {
+        background-color: #409eff !important;
+        color: #fff !important;
+      }
+      .el-tabs__item {
+        height: 48px;
+        line-height: 48px;
+        width: 33.33%;
+        text-align: center;
+        font-size: 18px;
+        &:last-child {
+          margin-left: 2px;
+        }
+      }
+    }
+    .serach {
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      .el-input__inner {
+        border-radius: 4px 0 0 4px;
+      }
+
+      .el-button {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+    .no-answer {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    .el-collapse {
+      border-top: none;
+      .el-collapse-item {
+        &:last-child {
+          .el-collapse-item__header {
+            border-bottom: none;
+          }
+        }
+        .el-collapse-item__header {
+          height: auto;
+          line-height: 1;
+          border-bottom: 1px dashed #ebeef5;
+          .is-active {
+            color: #409eff;
+          }
+          .el-collapse-item__arrow {
+            display: none;
+          }
+        }
+        .el-collapse-item__content {
+          background: #f8f9fa;
+          border: 1px solid #2d8ef8;
+          padding: 20px;
+          height: 318px;
+          overflow-y: auto;
+          img {
+            max-width: 100%;
+            object-fit: cover;
+          }
+          .btn-group {
+            text-align: center;
+            margin-top: 50px;
+            .el-button--default {
+              color: #409eff;
+              border: 1px solid#409EFF;
+            }
+          }
+        }
+      }
+    }
+  }
+  .qa-my_question {
+    .header {
+      padding: 20px 0;
+      width: 100%;
+      .title {
+        display: flex;
+        & > div:first-child {
+          font-size: 16px;
+          line-height: 1.5;
+          flex: 1;
+        }
+        .operate {
+          width: 180px;
+          margin-left: 100px;
+          display: flex;
+          justify-content: flex-end;
+          .el-button {
+            padding: 0 0 0 10px;
+          }
+        }
+      }
+      .warning {
+        background: rgba(255, 102, 102, 0.05);
+        border: 1px solid #ff6666;
+        border-radius: 4px;
+        border-radius: 4px;
+        color: #ff6666;
+        padding: 15px 10px;
+        margin-top: 20px;
+      }
+    }
+  }
+  .qa-my_answer, .qa-my_solution {
+    .add_solutions-dialog-upload {
+      border: 1px solid #dcdfe6;
+      background-color: #fff;
+      border-radius: 4px;
+      padding: 0 15px;
+      .add_solutions-dialog-upload-list {
+        border-bottom: 1px dashed #ced4da;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        > div {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        > i {
+          color: #ff6666;
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+    .el-collapse-item__content {
+      height: 480px !important;
+      overflow-y: auto;
+    }
+    .quill-editor {
+      background-color: #fff;
+    }
+    .header {
+      padding: 20px 0;
+      width: 100%;
+      .title {
+        & > div:first-child {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          & > div:first-child {
+            font-size: 16px;
+            line-height: 1.5;
+          }
+        }
+        .user {
+          display: flex;
+          align-items: center;
+          > span {
+            color: #adb5bd;
+            font-size: 14px;
+            margin-left: 10px;
+            &:last-child {
+              margin-left: 50px;
+            }
+          }
+        }
+      }
+      .answer {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #495057;
+        overflow: hidden;
+        /*文本不会换行*/
+        white-space: nowrap;
+        /*当文本溢出包含元素时，以省略号表示超出的文本*/
+        text-overflow: ellipsis;
+      }
+      .warning {
+        background: rgba(255, 102, 102, 0.05);
+        border: 1px solid #ff6666;
+        border-radius: 4px;
+        border-radius: 4px;
+        color: #ff6666;
+        padding: 15px 10px;
+        margin-top: 20px;
+      }
+    }
+  }
+}

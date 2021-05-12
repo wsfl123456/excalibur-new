@@ -1,0 +1,227 @@
+.staff-daily {
+  //自定义滚动条样式
+  ::-webkit-scrollbar-track {
+    height: 100px;
+  }
+  ::-webkit-scrollbar-track-piece {
+    background-color: #d8d8d8;
+    -webkit-border-radius: 5px;
+    height: 100px;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 100px;
+  }
+  ::-webkit-scrollbar-thumb:vertical {
+    background-color: #2d8ef8;
+    -webkit-border-radius: 5px;
+    outline: 2px solid #fff;
+    outline-offset: -2px;
+  }
+  padding: 20px;
+
+  .el-tabs__item {
+    height: 48px;
+    line-height: 48px;
+  }
+
+  .list {
+    margin-top: 30px;
+    .el-tabs__nav {
+      float: none;
+      .is-active {
+        background-color: #409eff !important;
+        color: #fff !important;
+      }
+      .el-tabs__item {
+        width: 50%;
+        text-align: center;
+        font-size: 18px;
+        &:last-child {
+          margin-left: 2px;
+        }
+      }
+    }
+    .serach {
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      .el-input__inner {
+        border-radius: 4px 0 0 4px;
+      }
+
+      .el-button {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+
+    .no-answer {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .is-activing {
+      .el-collapse-item__header {
+        border-bottom: none !important;
+      }
+    }
+
+    .el-collapse {
+      border-top: none;
+      .el-collapse-item {
+        &:last-child {
+          .el-collapse-item__header {
+            border-bottom: none;
+          }
+        }
+        .el-collapse-item__arrow {
+          display: none;
+        }
+        .el-collapse-item__header {
+          height: auto;
+          line-height: 1;
+          border-bottom: 1px dashed #ebeef5;
+          .is-active {
+            color: #409eff;
+          }
+          .header {
+            padding: 20px 0;
+            margin-right: 150px;
+            width: 80%;
+            .title {
+              display: flex;
+              div {
+                line-height: 1.2;
+              }
+              & > div:first-child {
+                font-size: 15px;
+                line-height: 1.5;
+              }
+            }
+            .user {
+              display: flex;
+              align-items: center;
+              margin-top: 10px;
+              & > span {
+                color: #adb5bd;
+                font-size: 14px;
+                margin-left: 10px;
+                &:last-child {
+                  margin-left: 50px;
+                }
+              }
+            }
+            .answer {
+              margin-top: 20px;
+              font-size: 14px;
+              color: #495057;
+              overflow: hidden;
+              /*文本不会换行*/
+              white-space: nowrap;
+              /*当文本溢出包含元素时，以省略号表示超出的文本*/
+              text-overflow: ellipsis;
+            }
+          }
+        }
+        .el-collapse-item__content {
+          background: #f8f9fa;
+          border: 1px solid #2d8ef8;
+          padding: 20px;
+          height: 318px;
+          overflow-y: auto;
+          display: none;
+          img {
+            max-width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+  .add-question {
+    position: fixed;
+    bottom: 200px;
+    right: -80px;
+    width: 120px;
+    height: 48px;
+    line-height: 48px;
+    display: flex;
+    background: #2d8ef8;
+    box-shadow: 0 0 4px 0 #4185f3;
+    border-radius: 100px 0px 0px 100px;
+    color: #fff;
+    transition: all 1s;
+
+    &:hover {
+      right: 0;
+    }
+
+    > div {
+      &:first-child {
+        width: 40px;
+        text-align: center;
+        font-size: 18px;
+      }
+      &:last-child {
+        width: 80px;
+        .el-button--text {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .el-dialog__body {
+    padding: 0;
+    .dislog-content {
+      padding: 20px 30px;
+      border-top: 1px solid #ced4da;
+      border-bottom: 1px solid #ced4da;
+    }
+  }
+  .cancel {
+    color: #409eff;
+    border: 1px solid #409eff;
+  }
+}
+
+.staff_detail {
+  padding: 20px;
+  .staff_detail-card {
+    background: #ffffff;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+    .staff_detail-card-header {
+      padding: 25px 20px;
+      border-bottom: 1px solid #ced4da;
+      > div {
+        &:first-child {
+          font-size: 18px;
+          color: #343a40;
+        }
+        &:last-child {
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+          & > span {
+            color: #adb5bd;
+            font-size: 14px;
+            margin-left: 10px;
+            &:last-child {
+              margin-left: 50px;
+            }
+          }
+        }
+      }
+    }
+
+    .staff_detail-card-content {
+      padding: 25px 20px;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+

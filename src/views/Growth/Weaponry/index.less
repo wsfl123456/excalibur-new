@@ -1,0 +1,247 @@
+.weaponry {
+  //自定义滚动条样式
+  ::-webkit-scrollbar-track {
+    height: 100px;
+  }
+  ::-webkit-scrollbar-track-piece {
+    background-color: #d8d8d8;
+    -webkit-border-radius: 5px;
+    height: 100px;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 100px;
+  }
+  ::-webkit-scrollbar-thumb:vertical {
+    background-color: #2d8ef8;
+    -webkit-border-radius: 5px;
+    outline: 2px solid #fff;
+    outline-offset: -2px;
+  }
+  padding: 20px;
+  .filter {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    & > div {
+      display: flex;
+      &:first-child {
+        border-bottom: 1px solid #ced4da;
+      }
+      .label {
+        width: 120px;
+        height: 48px;
+        line-height: 48px;
+        background: #f8f9fa;
+        border-right: 1px solid #ced4da;
+        border-radius: 4px 0 0 4px;
+        color: #868e96;
+        text-align: center;
+      }
+      .radio-group {
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .content {
+    margin-top: 30px;
+    .el-tabs__nav {
+      float: none;
+      .is-active {
+        background-color: #409eff !important;
+        color: #fff !important;
+      }
+      .el-tabs__item {
+        width: 50%;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        font-size: 18px;
+        &:last-child {
+          margin-left: 2px;
+        }
+      }
+    }
+    .serach {
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      .el-input__inner {
+        border-radius: 4px 0 0 4px;
+      }
+
+      .el-button {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+
+    .no-answer {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .weaponry-list {
+      & > div {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        cursor: pointer;
+        &:not(:last-child) {
+          border-bottom: 1px dashed #ced4da;
+        }
+        .user {
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+          & > span {
+            color: #adb5bd;
+            font-size: 14px;
+            margin-left: 10px;
+            &:last-child {
+              margin-left: 50px;
+            }
+          }
+        }
+
+        .file-content {
+          .header {
+            color: #2d8ef8;
+            font-size: 18px;
+            line-height: 1.5;
+          }
+          ul{
+            margin-top: 20px;
+            li {
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+
+      .el-dialog__body {
+        padding: 0;
+        .dialog-content {
+          padding: 20px 30px;
+          border-top: 1px solid #ced4da;
+          border-bottom: 1px solid #ced4da;
+          .title {
+            border-bottom: 1px dashed #ced4da;
+            padding-bottom: 20px;
+            > div {
+              display: flex;
+              justify-content: space-between;
+              &:first-child {
+                font-weight: bold;
+              }
+              &:last-child {
+                color: #adb5bd;
+                margin-top: 10px;
+              }
+            }
+          }
+
+          .summary {
+            margin-top: 20px;
+            > div {
+              &:first-child {
+                font-weight: bold;
+                margin-bottom: 10px;
+              }
+              &:last-child {
+                height: 300px;
+                overflow-y: auto;
+                padding: 5px 0;
+                img {
+                  max-width: 100%;
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .el-dialog__footer {
+        .download {
+          color: #fff;
+          background-color: #409eff;
+          border-color: #409eff;
+          display: inline-block;
+          line-height: 1;
+          white-space: nowrap;
+          cursor: pointer;
+          border: 1px solid #dcdfe6;
+          padding: 12px 20px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+.weaponry_detail {
+  padding: 20px;
+  .weaponry_detail-card {
+    background: #ffffff;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+    .weaponry_detail-card-header {
+      padding: 25px 20px;
+      border-bottom: 1px solid #ced4da;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .weaponry_detail-card-header-user {
+        > div {
+          &:first-child {
+            font-size: 18px;
+            color: #343a40;
+          }
+          &:last-child {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            & > span {
+              color: #adb5bd;
+              font-size: 14px;
+              margin-left: 10px;
+              &:last-child {
+                margin-left: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .weaponry_detail-card-content {
+      padding: 25px 20px;
+      .weaponry_detail-card-content-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        i {
+          font-size: 25px;
+        }
+      }
+      .weaponry_detail-card-content-content {
+        margin: 20px 0;
+        background-color: #f8f9fa;
+        padding: 25px 20px;
+        > div {
+          &:first-child {
+            font-size: 16px;
+            color: #495057;
+            margin-bottom: 10px;
+          }
+        }
+        &-info {
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
